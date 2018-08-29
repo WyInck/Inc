@@ -1,3 +1,4 @@
+-- out of spells casts, button turns red
 hooksecurefunc("ActionButton_OnUpdate", function(self, elapsed) 
    if ( self.rangeTimer == TOOLTIP_UPDATE_TIME and self.action) then 
       local range = false 
