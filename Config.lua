@@ -30,7 +30,7 @@ local 	wmmenuList = {
 
 
 
---  隐藏宠物，队友，战场旗手，竞技场框体状态文字
+--  sth. hide
 hooksecurefunc("TextStatusBar_UpdateTextString", function(textStatusBar) 
    local name = textStatusBar:GetName() 
     if (name == "PartyMemberFrame1HealthBar" 
@@ -57,15 +57,15 @@ hooksecurefunc("TextStatusBar_UpdateTextString", function(textStatusBar)
     end 
 end)
 
---  显示LUA错误，1开 
+--  lua errors on or off 
 SetCVar("scriptErrors", 1)
 
--- 施法条隐藏
---CastingBarFrame:UnregisterAllEvents() 
---CastingBarFrame.Show = function() end 
---CastingBarFrame:Hide()
+-- castbar hide
+CastingBarFrame:UnregisterAllEvents() 
+CastingBarFrame.Show = function() end 
+CastingBarFrame:Hide()
 
--- TalkingHeadFrame隐藏
+-- TalkingHeadFrame hide
 local f = CreateFrame("Frame")
 --Main function
 function f:OnEvent(event, addon)
@@ -84,15 +84,17 @@ function f:OnEvent(event, addon)
 end
 				f:RegisterEvent("ADDON_LOADED")
 				f:SetScript("OnEvent", f.OnEvent)
--- 快速删除
+-- quick del.
 hooksecurefunc(StaticPopupDialogs["DELETE_GOOD_ITEM"],"OnShow",function(boxEditor) boxEditor.editBox:SetText(DELETE_ITEM_CONFIRM_STRING) end)
 
--- 头像框体隐藏
+-- BLZ_UI hide
 TargetFrame:UnregisterAllEvents()
 TargetFrame:Hide()
 PlayerFrame:UnregisterAllEvents()
 PlayerFrame:Hide()
--- 拾取框体隐藏
+-- loot frame hide
 LootFrame:UnregisterAllEvents()
 LootFrame:Hide()
--- 姿态条
+-- extraactionbar position changed
+ExtraActionBarFrame:SetPoint("CENTER", UIParent, "CENTER", 200, -100)
+
