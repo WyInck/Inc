@@ -28,8 +28,6 @@ local 	wmmenuList = {
 			end 
 		end)
 
-
-
 --  sth. hide
 hooksecurefunc("TextStatusBar_UpdateTextString", function(textStatusBar) 
    local name = textStatusBar:GetName() 
