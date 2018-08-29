@@ -1,3 +1,4 @@
+-- friend colors by 仁者無敵 CN
 local _, ns = ...
 local ycc = {}
 ns.ycc = ycc
@@ -109,7 +110,7 @@ if CUSTOM_CLASS_COLORS then
     end)
 end
 
----好友列表着色
+-- friend list colors
 local _, ns = ...
 local ycc = ns.ycc
 
@@ -162,7 +163,7 @@ end
 hooksecurefunc(FriendsFrameFriendsScrollFrame, 'update', friendsFrame)
 hooksecurefunc('FriendsFrame_UpdateFriends', friendsFrame)
 
---查询列表着色
+-- find list colors
 local _, ns = ...
 local ycc = ns.ycc
 
@@ -173,7 +174,7 @@ hooksecurefunc('WhoList_Update', function()
     local playerGuild = GetGuildInfo'player'
     local playerRace = UnitRace'player'
 
-    for i=1, WHOS_TO_DISPLAY, 1 do
+    for i = 1, WHOS_TO_DISPLAY, 1 do
         local index = whoOffset + i
         local nameText = getglobal('WhoFrameButton'..i..'Name')
         local levelText = getglobal('WhoFrameButton'..i..'Level')
