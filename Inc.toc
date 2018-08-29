@@ -10,3 +10,4 @@ FriendColor.lua
 OutDistance.lua
 IncNamePlates.lua
 QuestBetter.lua
+ScrapAutoFilter.lua
