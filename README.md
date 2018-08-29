@@ -1,7 +1,7 @@
 # Inc
 Inc's tools - addons of world of warcraft.
 -----
-2018.08.29 build, 8.0 release 
+2018.08.29 build, 8.0 release '|n'
 --AutoRepair.lua .. 自动修理,会优先使用公会修理
 --AutoSell.lua .. 自动售卖垃圾或自己调节品质(优秀,精良,史诗 etc.)
 --Config.lua .. 一些自定义设置
