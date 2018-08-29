@@ -2,7 +2,7 @@ local vmheight = 450
 local vmwidth = 200
 local vm = ObjectiveTrackerFrame
 
--- 任务追踪名称职业着色 -------------------------------------------------------
+-- quest name colors by class 
 local r, g, b = 103/255, 103/255, 103/255
 local class = select(2, UnitClass("player"))
 local colour = CUSTOM_CLASS_COLORS and CUSTOM_CLASS_COLORS[class] or RAID_CLASS_COLORS[class]
@@ -62,13 +62,8 @@ local function hoverachieve(_, block)
 hooksecurefunc(ACHIEVEMENT_TRACKER_MODULE, "OnBlockHeaderEnter", hoverachieve)
 hooksecurefunc(ACHIEVEMENT_TRACKER_MODULE, "OnBlockHeaderLeave", hoverachieve)
 
- 
---------------------------------------------------------------------------------------------------------
---                                    显示任务等级                                      --
---------------------------------------------------------------------------------------------------------
+ ----- quest lv -----
 local QuestLevelPatch = {}
-
--- 追踪栏显示任务等级
 function SetBlockHeader_hook()
 for i = 1, GetNumQuestWatches() do
 	local questID, title, questLogIndex, numObjectives, requiredMoney, isComplete, startEvent, isAutoComplete, failureTime, timeElapsed, questType, isTask, isStory, isOnMap, hasLocalPOI = GetQuestWatchInfo(i)
@@ -80,22 +75,17 @@ for i = 1, GetNumQuestWatches() do
 		local oldHeight = QUEST_TRACKER_MODULE:SetStringText(oldBlock.HeaderText, title, nil, OBJECTIVE_TRACKER_COLOR["Header"])
 		local questLevel = select(2, GetQuestLogTitle(questLogIndex))
 		local newTitle = title
-		-- 除去110等级的任务等级提示
-		if questLevel ~= 110 then
+		if questLevel ~= 120 then
 			newTitle = "["..questLevel.."] "..title
 		end
-			newTitle = string.gsub(newTitle, "，燃烧王座", "")
-			newTitle = string.gsub(newTitle, "，燃燒王座", "")
+			newTitle = string.gsub(newTitle, "，奥迪尔", "")
+			newTitle = string.gsub(newTitle, "，奥迪尔", "")
 		local newHeight = QUEST_TRACKER_MODULE:SetStringText(oldBlock.HeaderText, newTitle, nil, OBJECTIVE_TRACKER_COLOR["Header"])
 	end
 
 end
 end
 hooksecurefunc(QUEST_TRACKER_MODULE, "Update", SetBlockHeader_hook)
-
-
-
--- 任务详细信息显示任务等级
 function QuestInfo_hook(template, parentFrame, acceptButton, material, mapView)
 local elementsTable = template.elements
 for i = 1, #elementsTable, 3 do
