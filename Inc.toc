@@ -1,0 +1,12 @@
+## Interface: 80000
+## Title: Inc UI |cff44CCFFby Inc|r
+## Notes: 包含一些小功能的UI,自动修理售卖,好友列表美化等。
+## Author: WyInck
+
+AutoRepair.lua
+AutoSell.lua
+Config.lua
+FriendColor.lua
+OutDistance.lua
+IncNamePlates.lua
+QuestBetter.lua
