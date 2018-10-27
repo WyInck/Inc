@@ -14,10 +14,10 @@ hooksecurefunc("CompactUnitFrame_OnUpdate", function(frame)
 			end
 		end
             --local colorC = _G["RAID_CLASS_COLORS"][select(2, UnitClass("player"))]
-            if name == "爆炸物" or 'Explosives' then
+            if name == ("爆炸物" or 'Explosives') then
                   r, g, b = 0.8, 0, 1
 	            -- 特殊单位，紫红
-	        elseif name == "戈霍恩之嗣" or "Spawn of G'huun" then
+	        elseif name == ("戈霍恩之嗣" or "Spawn of G'huun") then
                   r, g, b = 0.8, 0, 1
 	            -- 特殊单位，紫红
 	        elseif ghuun == true then
