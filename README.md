@@ -6,6 +6,8 @@ Inc's tools - Addons of World of Warcraft.
 
 2018.08.29 
 -----
+  * Build addons files. 
+  
   * 8.0 live supported. 
 
   * AutoRepair.lua .. 自动修理,会优先使用公会修理
