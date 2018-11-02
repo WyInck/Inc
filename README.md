@@ -3,8 +3,11 @@
 Inc's tools - Addons of World of Warcraft.
 
 -----
-
-2018.08.29 
+2018,11,02
+-----
+  * IncNameplates.lua
+    * Added lines about the G'huuns buff colored.   
+2018,08,29 
 -----
   * Build addons files. 
   
