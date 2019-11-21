@@ -18,5 +18,5 @@ local Scrap = CreateFrame("Frame")
 end) 
 Scrap:RegisterEvent("SCRAPPING_MACHINE_PENDING_ITEM_CHANGED")
 Scrap:RegisterEvent("SCRAPPING_MACHINE_SCRAPPING_FINISHED")
-Scrap:RegisterEvent("BAG_OPEN")
+--Scrap:RegisterEvent("BAG_OPEN")
 
